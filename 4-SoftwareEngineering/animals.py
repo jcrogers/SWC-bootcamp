@@ -58,7 +58,9 @@ def getanimal(date, time, animal, number, animal_name):
 
 def mooat(filename,antype):
     """
+    'Mean Of One Animal Type'
     Gives the mean number of a given animal atype from the file input.
+    result=mooat('animals.txt','Elk')
     """
     import animals
     d,t,a,n=animals.ranimals(filename)
