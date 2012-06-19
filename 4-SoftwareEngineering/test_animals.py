@@ -6,14 +6,14 @@ def test_read_animals():
     ref_time=['21:06','14:12','10:24','20:08','18:46']
     ref_number=[36,25,26,31,20]
     assert time == ref_time, "Times don't match!"
-    if time != ref_time:
-        print 'Times do not match!'
-    else:
-        print 'Times ok!'
-    if number != ref_number:
-        print 'Numbers do not match!'
-    else:
-        print 'Animal numbers ok!'
+    #if time != ref_time:
+     #   print 'Times do not match!'
+    #else:
+     #   print 'Times ok!'
+    #if number != ref_number:
+     #   print 'Numbers do not match!'
+    #else:
+     #   print 'Animal numbers ok!'
 
 #This line calls the function that we defined.
 test_read_animals()
@@ -36,4 +36,15 @@ def test_read_and_mean():
 
 test_read_and_mean()
 
+def test_mooat():
+    filename = 'animals.txt'
+    antype = 'Elk'
+    meanelk=animals.mooat(filename,antype)
+    ref_meanelk = 25.5
+    assert meanelk == ref_meanelk, 'Mean Elk does not match!'
+    antypeb = 'Muskox'
+    ref_meanmo = 20
+    meanmo=animals.mooat(filename,antypeb)
+    assert meanmo == ref_meanmo, 'Mean Muskoxen do not match!'
 
+test_mooat()

@@ -20,6 +20,8 @@ def ranimals(filename):
         animal.append(a)
         number.append(int(n))
     return date, time, animal, number
+#If you just do data=ranimals(filename) then it returns a tuple of those 4 variables.
+
 
 def amean(filename):
     """
@@ -32,6 +34,33 @@ def amean(filename):
     return meann
 
 def mean(n):
+    """
+    Returns the mean value of the given input list.
+    """
     meann=sum(n)/float(len(n))
     return meann
 
+def getanimal(date, time, animal, number, animal_name):
+    """
+    Counts the mean number of a given animal.
+    data input is (date,time,animal,number)
+    """
+    tot=0.
+    obs=0.
+    for i in range(0,len(date)):
+    #for d,t,a,n in zip(date,time,animal,number):    
+        if animal[i] == animal_name:
+            tot=tot+number[i]
+            obs=obs+1
+    meann=tot/obs
+    return meann
+
+
+def mooat(filename,antype):
+    """
+    Gives the mean number of a given animal atype from the file input.
+    """
+    import animals
+    d,t,a,n=animals.ranimals(filename)
+    meann=animals.getanimal(d,t,a,n,antype)
+    return meann
