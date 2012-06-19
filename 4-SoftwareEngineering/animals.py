@@ -20,3 +20,12 @@ def ranimals(filename):
         animal.append(a)
         number.append(int(n))
     return date, time, animal, number
+
+def amean(filename):
+    """
+    Reads the animal file, and 
+    calculates the mean of the number of animals spotted.
+    """
+    d,t,a,number=animals.ranimals(filename)
+    mean=sum(n)/float(len(n))
+    return mean
