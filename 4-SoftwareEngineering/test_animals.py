@@ -18,9 +18,10 @@ def test_read_animals():
 #This line calls the function that we defined.
 test_read_animals()
 
-def test_mean(filename):
+def test_mean():
+    filename = 'animals.txt'
     mean=animals.amean(filename)
     ref_mean = 27.6
     assert mean == ref_mean, 'Mean does not match!'
 
-test_mean('animals.txt')
+test_mean()

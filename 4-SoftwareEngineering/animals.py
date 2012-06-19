@@ -26,6 +26,7 @@ def amean(filename):
     Reads the animal file, and 
     calculates the mean of the number of animals spotted.
     """
-    d,t,a,number=animals.ranimals(filename)
+    import animals
+    d,t,a,n=animals.ranimals(filename)
     mean=sum(n)/float(len(n))
     return mean
