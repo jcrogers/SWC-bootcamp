@@ -28,5 +28,10 @@ def amean(filename):
     """
     import animals
     d,t,a,n=animals.ranimals(filename)
-    mean=sum(n)/float(len(n))
-    return mean
+    meann=sum(n)/float(len(n))
+    return meann
+
+def mean(n):
+    meann=sum(n)/float(len(n))
+    return meann
+

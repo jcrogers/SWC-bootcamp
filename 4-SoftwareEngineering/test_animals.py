@@ -18,10 +18,22 @@ def test_read_animals():
 #This line calls the function that we defined.
 test_read_animals()
 
+from numpy import testing
+
 def test_mean():
+    assert animals.mean([5]) == 5
+    assert animals.mean([3,5]) == 4
+    assert animals.mean([1,2,3,4]) == 2.5
+    testing.assert_almost_equal(animals.mean([1,2,3,4]),2.5)
+
+test_mean()
+
+def test_read_and_mean():
     filename = 'animals.txt'
     mean=animals.amean(filename)
     ref_mean = 27.6
     assert mean == ref_mean, 'Mean does not match!'
 
-test_mean()
+test_read_and_mean()
+
+
